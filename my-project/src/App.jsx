@@ -1,5 +1,6 @@
 import Navbar from './components/Navbar' 
 import Home from './pages/Home';
+import Blog1 from './components/Blog1';
 import LoginRegisterPopup from './pages/LoginRegisterPopup'
 import {QueryClient,QueryClientProvider} from '@tanstack/react-query'
 import {
@@ -81,5 +82,6 @@ function App() {
        <RouterProvider router={router} />
     </div>;
   }
+ 
   
   export default App;
