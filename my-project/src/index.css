@@ -9,7 +9,10 @@
     .h1-bold {
       @apply text-[36px] font-bold leading-[140%] tracking-tighter;
     }
-  
+    .logo-container {
+      @apply w-[300px] h-auto;
+      
+    }
     .h1-semibold {
       @apply text-[36px] font-semibold leading-[140%] tracking-tighter;
     }
