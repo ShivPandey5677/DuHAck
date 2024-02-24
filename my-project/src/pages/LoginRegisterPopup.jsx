@@ -31,9 +31,9 @@ const LoginRegisterPopup = () => {
           <div className="bg-blue-100 p-8 rounded shadow-md w-96">
           <h1 className="text-2xl font-semibold text-gray-800 mb-4">Login</h1>
             <div className="flex items-center justify-center">
-              <div className="w-64 h-64 bg-blue-800 flex items-center justify-center rounded-md">
+              <div className="w-full h-full bg-[#86B6F6] flex items-center justify-center rounded-md">
                 <div className="flex flex-col gap-4">
-                  <form className="flex flex-col gap-4">
+                  <form className="flex flex-col gap-4 m-16">
                     <input
                       type="text"
                       placeholder="Username"
