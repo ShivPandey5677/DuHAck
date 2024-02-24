@@ -13,6 +13,9 @@
       @apply w-[300px] h-auto;
       
     }
+    .logo-container2{
+      @apply w-[400px] h-auto;
+    }
     .h1-semibold {
       @apply text-[36px] font-semibold leading-[140%] tracking-tighter;
     }
