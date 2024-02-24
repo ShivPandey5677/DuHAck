@@ -7,9 +7,11 @@ import {
   Outlet,
   Navigate,
 } from "react-router-dom";
+
 import SignUp from './pages/SignUp';
 import Profile from './pages/Profile';
 import Psych from './pages/Psych';
+
 function App() {
   const currentUser=true;
   const Layout=()=>{
@@ -17,6 +19,7 @@ function App() {
        <div>
       <Navbar/>
         <Outlet/>
+        
         </div>
     );
 

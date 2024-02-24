@@ -34,7 +34,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="h-screen bg-gray-900 text-white">
+    <div className="h-screen bg-gray-900 text-white rounded-[50px]">
       <div className="container mx-auto flex items-center justify-center h-full">
         <motion.div
           initial={{ y: '100vh', scale: 0.5 }}
