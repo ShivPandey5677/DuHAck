@@ -1,4 +1,5 @@
 import Navbar from './components/Navbar' 
+import LoginRegisterPopup from './pages/LoginRegisterPopup'
 function App() {
  
 
@@ -6,7 +7,11 @@ function App() {
 
   <div  className="bg-slate-900">
     <Navbar/>
+    <header className="App-header">
+        <LoginRegisterPopup />
+      </header>
   </div>
+
 
    
   )
