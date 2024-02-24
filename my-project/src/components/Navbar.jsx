@@ -30,11 +30,11 @@ const Navbar = () => {
             <AiOutlineMail size={20} /> Contact
           </Link>
 
-          <Link to="/SignUp" spy={true} smooth={true} className="hover:bg-teal-800 hover:text-white-500 hover:rounded  transition py-2 px-4 hover:scale-110 ease-in duration-200">
+          <Link to="/register" spy={true} smooth={true} className="hover:bg-teal-800 hover:text-white-500 hover:rounded  transition py-2 px-4 hover:scale-110 ease-in duration-200">
             <AiOutlineUserAdd size={20}/> <b>SignUp</b>
           </Link>
 
-          <Link to="/LogIn" spy={true} smooth={true} className="hover:bg-teal-800  hover:text-white-500 hover:rounded transition py-2 px-4 hover:scale-110 ease-in duration-200">
+          <Link to="/login" spy={true} smooth={true} className="hover:bg-teal-800  hover:text-white-500 hover:rounded transition py-2 px-4 hover:scale-110 ease-in duration-200">
             <AiOutlineLogin size={20}/><b> LogIn</b>
           </Link>
         </div>
