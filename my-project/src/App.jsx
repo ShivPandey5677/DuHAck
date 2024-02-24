@@ -19,7 +19,7 @@ function App() {
        <div>
       <Navbar/>
         <Outlet/>
-        <Profile/>
+        
         </div>
     );
 
