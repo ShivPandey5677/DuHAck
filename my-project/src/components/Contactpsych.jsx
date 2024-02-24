@@ -1,8 +1,17 @@
-import React from 'react'
-import { motion } from 'framer-motion';
+import React, { useEffect, useState } from 'react'
+import { motion,useAnimation } from 'framer-motion';
+import {useInView} from "react-intersection-observer";
 const Contactpsych = () => {
+    const boxVariant = {
+        visible: { x: 0, scale: 1 },
+        hidden:{ x: '100vw', scale: 0.5 }
+      };
+      const [ref, inView] = useInView() 
+      const controls = useAnimation()
+
+      useEffect(() => { if (inView) { controls.start('visible') } else { controls.start('hidden') } }, [controls, inView])
     return (
-        <div className="h-screen bg-[#176B87] text-white">
+        <div className="h-screen bg-[#176B87] text-white rounded-[50px]">
           <div className="container mx-auto flex items-center justify-center h-full">
             <motion.div
               initial={{ opacity: 0, y: 20, scale: 0.8 }}
@@ -29,14 +38,7 @@ const Contactpsych = () => {
                 Take A Quiz
               </button>
             </motion.div>
-            <motion.div
-              initial={{ x: '100vw', scale: 0.5 }}
-              animate={{ x: 0, scale: 1 }}
-              transition={{ type: 'spring', stiffness: 80, duration: 1.5 }}
-              className="flex-none mr-8"
-            >
-              <img src="/assets/images/psych.jpeg" alt="Quiz" className="rounded-lg mb-8 m-8 w-[80%] h-[80%]" /> {/* Increased maxWidth for larger image */}
-            </motion.div>
+            <div ref={ref}> <motion.img initial="hidden" animate={controls} variants={boxVariant} src="/assets/images/psych.jpeg" alt="Animated image" className="rounded-lg mb-8 m-8 w-[80%] h-[80%]" /> </div>
           </div>
         </div>
       );

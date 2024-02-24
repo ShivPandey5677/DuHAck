@@ -236,7 +236,7 @@
       );
     }
     .gradient-text {
-      background-image: linear-gradient(to right, #c466ef, #630b66); /* Gradient colors */
+      background-image: linear-gradient(to right, #86B6F6, #176B87); /* Gradient colors */
       -webkit-background-clip: text; /* For webkit-based browsers like Chrome and Safari */
       background-clip: text; /* Specifies the painting area of the background */
       color: transparent; /* Make the text transparent to reveal the gradient background */

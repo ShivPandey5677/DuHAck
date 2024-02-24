@@ -1,10 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { TypeAnimation } from 'react-type-animation';
+
 
 
 const Hero = () => {
   return (
-    <div className="h-screen bg-gray-900 text-white">
+    <div className="h-screen bg-gray-900 text-white rounded-[50px]">
       <div className="container mx-auto flex items-center justify-center h-full">
         <motion.div
           initial={{ x: '100vw', scale: 0.5 }}
@@ -20,13 +22,17 @@ const Hero = () => {
           transition={{ delay: 0.5, duration: 1.5, type: 'spring', stiffness: 80 }}
           className="flex flex-col items-center"
         >
-          <motion.h1
-            initial={{ scale: 0.8 }}
-            animate={{ scale: 1 }}
-            className="text-5xl font-bold mb-4"
-          >
-            Depression Diagnostic Centre
-          </motion.h1>
+          <h1 className="text-5xl font-bold mb-4 ">
+            <span className = "gradient-text">
+            <TypeAnimation
+              sequence={['Depression', 1000,'Anxiety',1000, 'Trauma',1000,'Mind-State',1000]}
+              wrapper = "span" // Loop the animation
+              typingSpeed={10000} // Adjust the typing speed
+              repeat = {Infinity}
+            />
+            </span>
+            Diagnostic Centre
+          </h1>
           <motion.p
             initial={{ scale: 0.8 }}
             animate={{ scale: 1 }}

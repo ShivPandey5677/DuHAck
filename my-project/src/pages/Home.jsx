@@ -4,7 +4,7 @@ import Contactpsych from '../components/Contactpsych'
 
 const Home = () => {
   return (
-    <div>
+    <div className="flex flex-col bg-[#86B6F6]">
       <Hero/>
       <Contactpsych/>
     </div>
