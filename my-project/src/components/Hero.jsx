@@ -2,8 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
 
-
-
 const Hero = () => {
   return (
     <div className="h-screen bg-gray-900 text-white">
@@ -37,11 +35,11 @@ const Hero = () => {
             initial={{ scale: 0.8 }}
             animate={{ scale: 1 }}
             className="text-xl mb-8"
-          >
-            We Find We Solve
+          ><br></br>
+            We Find We Cure
           </motion.p>
           
-          <button className="font-sans text-lg rounded-md uppercase text-white cursor-pointer border-3 border-blue-500 p-2 px-4 relative select-none shadow-1 shadow-2 shadow-3 shadow-4 shadow-5 transition-transform duration-200 ease-in-out transform hover:translate-x-1 hover:translate-y-1 bg-blue-500 skew-x-12">
+          <button className="font-sans text-lg rounded-md uppercase text-white cursor-pointer border-3 border-blue-500 p-2 px-4 relative select-none shadow-1 shadow-2 shadow-3 shadow-4 shadow-5 transition-transform duration-200 ease-in-out transform hover:translate-x-1 hover:translate-y-1 bg-blue-800 ">
             Take A Quiz
           </button>
           
