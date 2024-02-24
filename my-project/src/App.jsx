@@ -17,6 +17,7 @@ import QuizPage from './pages/QuizPage';
 import { AuthContext } from './context/authContext';
 import { useContext } from 'react';
 import NavBarL from './components/NavBarL';
+import RegPsych from './pages/RegPsych';
 
 function App() {
   const {currentUser}=useContext(AuthContext);
@@ -33,19 +34,12 @@ function App() {
     );
 
   };
-  const ProtectedRoute=({children})=>{
-    if(!currentUser){
-    return <Navigate to="/login"/>}
-    return children
 
-  }
   const router = createBrowserRouter([
     {
       path:"/",
       element:
-      <ProtectedRoute>
-      <Layout/>
-      </ProtectedRoute>,
+      <Layout/>,
       children:[
         {
           path:"/",
@@ -62,7 +56,11 @@ function App() {
         {
           path:"/quiz",
           element:<QuizPage/>
-        }
+        },
+        {
+          path:"/registerpsych",
+          element:<RegPsych/>
+        },
        
       ]
     },

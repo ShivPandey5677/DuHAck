@@ -36,12 +36,20 @@ const Contactpsych = () => {
               >
             We have access to professional psychologists who assist us in rising over the zero line.
               </motion.p>
+            <div className="flex">
+              <Link to="/registerpsych">
+              <button className="font-sans text-lg rounded-md uppercase text-white cursor-pointer border-3 border-blue-500 p-2 px-4 relative select-none shadow-1 shadow-2 shadow-3 shadow-4 shadow-5 transition-transform duration-200 ease-in-out transform hover:translate-x-1 hover:translate-y-1 bg-[#0c131d] hover:bg-[#223d62] skew-x-12 mr-4">
+                Register As Psychiatirist
+              </button>
+              </Link>
               <Link to="/psychiatrist">
               <button className="font-sans text-lg rounded-md uppercase text-white cursor-pointer border-3 border-blue-500 p-2 px-4 relative select-none shadow-1 shadow-2 shadow-3 shadow-4 shadow-5 transition-transform duration-200 ease-in-out transform hover:translate-x-1 hover:translate-y-1 bg-[#0c131d] hover:bg-[#223d62] skew-x-12">
                 Consult Psychiatirist
               </button>
               </Link>
+              </div>
             </motion.div>
+
             <div ref={ref}> <motion.img initial="hidden" animate={controls} variants={boxVariant} src="/assets/images/psych.jpeg" alt="Animated image" className="rounded-lg mb-8 m-8 w-[80%] h-[80%]" /> </div>
           </div>
         </div>

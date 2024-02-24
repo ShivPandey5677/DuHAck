@@ -10,8 +10,6 @@ const Home = () => {
       <Hero/>
       <Blog1/>
       <Contactpsych/>
-     
-      
     </div>
     
     

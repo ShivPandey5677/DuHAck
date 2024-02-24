@@ -15,7 +15,7 @@ const Blog1 = () => {
 
       useEffect(() => { if (inView) { controls.start('visible') } else { controls.start('hidden') } }, [controls, inView])
     return (
-        <div className="h-screen bg-[yellow] text-black rounded-[30px]">
+        <div className="h-screen bg-[yellow] text-black ">
           <div className="container mx-auto flex items-center justify-center h-full">
             <motion.div
             //   initial={{ opacity: 0, y: 20, scale: 0.8 }}
@@ -46,7 +46,7 @@ const Blog1 = () => {
     </motion.button>
     <br></br>
               
-              <motion.button
+    <motion.button
       whileHover={{ scale: 1.1, backgroundColor: "#e6e6fa", color: "black" }}
       whileTap={{ scale: 0.9 }}
       transition={{ duration: 0.2 }}
@@ -76,7 +76,7 @@ const Blog1 = () => {
 
     <br></br>
 
-            </motion.div>
+    </motion.div>
 
 
             <div ref={ref}> <motion.img initial="hidden" animate={controls} variants={boxVariant} src="/assets/images/w.jpg" alt="Animated image" className="rounded-lg mb-8 m-8 w-[60%] h-[60%]" /> </div>

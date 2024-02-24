@@ -20,7 +20,7 @@ const NavBarL = () => {
           <Link to="/About" spy={true} smooth={true} className="hover:bg-slate-800 hover:rounded py-2 px-4 hover:scale-110 ease-in duration-200">
             <AiOutlineInfoCircle size={20}/> About
           </Link>
-          <Link to="/Psych" spy={true} smooth={true} className="hover:bg-slate-800 hover:rounded py-2 px-4 hover:scale-110 ease-in duration-200">
+          <Link to="/psychiatrist" spy={true} smooth={true} className="hover:bg-slate-800 hover:rounded py-2 px-4 hover:scale-110 ease-in duration-200">
             <AiOutlineUserSwitch size={20}/> Psychiatrist
           </Link>
           <Link to="/Contact"spy={true} smooth={true}  className="hover:bg-slate-800 hover:bg-slate-800  hover:rounded py-2 px-4 hover:scale-110 ease-in duration-200">

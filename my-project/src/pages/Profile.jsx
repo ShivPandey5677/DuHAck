@@ -7,8 +7,8 @@ const Profile = () => {
   return (
     <>
       <div className="w-full h-[300px] relative">
-        <img src="/c.jpg" alt="" className="w-full h-full object-cover" />
-        <img src="/r.jpg" alt="" className="w-[200px] h-[200px] rounded-[50%] object-cover absolute left-0 right-0 m-auto top-[200px]" />
+        <img src="/assets/images/c.jpg" alt="" className="w-full h-full object-cover" />
+        <img src="/assets/images/r.jpg" alt="" className="w-[200px] h-[200px] rounded-[50%] object-cover absolute left-0 right-0 m-auto top-[200px]" />
       </div>
     
       <div className='px-[20px] py-[70px] md:p-[20px] sm:p-[10px]'>
