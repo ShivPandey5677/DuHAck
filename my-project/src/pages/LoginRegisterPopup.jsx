@@ -1,29 +1,37 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../context/authContext";
 
 const LoginRegisterPopup = () => {
   const [inputs, setInputs] = useState({
     username: "",
     password: "",
   });
-
-  const [isOpen, setIsOpen] = useState(false); // State to track if popup is open
-
-  const handleChange = (e) => {
-    setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  };
-
-  const handleLogin = async (e) => {
-    e.preventDefault();
-    // Your login logic here
-  };
-
+  const [err, setErr] = useState(null);
+  const navigate=useNavigate();
+  const handleChange=(e)=>{
+    setInputs((prev)=>({...prev,[e.target.name]:e.target.value}))
+  }
+  const {login}=useContext(AuthContext);
+  const handleLogin=async (e)=>{
+    e.preventDefault()
+    try{
+    const res=await login(inputs);
+    navigate("/")
+    }catch(err){
+      if (err.response && err.response.data && err.response.data.message) {
+        setErr(err.response.data.message);
+      } else {
+        setErr("An unexpected error occurred.");
+      }
+    }
+  }
   const togglePopup = () => {
-    setIsOpen(!isOpen); // Toggle popup state
+    setIsOpen(!isOpen);
   };
 
   return (
     <div>
-    
         <div className="fixed inset-0 flex items-center justify-center">
           <img
             src="/assets/images/new.jpg"
@@ -52,6 +60,7 @@ const LoginRegisterPopup = () => {
                         className="border-none border-b border-gray-300 p-2 rounded-md"
                         onChange={handleChange}
                       />
+                       {err && err}
                       <button
                         onClick={handleLogin}
                         className="bg-blue-400 text-white font-bold py-2 px-4 rounded-md"
