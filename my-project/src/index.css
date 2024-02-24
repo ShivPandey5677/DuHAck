@@ -241,6 +241,12 @@
       background-clip: text; /* Specifies the painting area of the background */
       color: transparent; /* Make the text transparent to reveal the gradient background */
     }
+    .gradient-textpsych {
+        background-image: linear-gradient(to right,#b695f0, #11b6cb); /* Gradient colors */
+        -webkit-background-clip: text; /* For webkit-based browsers like Chrome and Safari */
+        background-clip: text; /* Specifies the painting area of the background */
+        color: transparent; /* Make the text transparent to reveal the gradient background */
+      }
     .gradient-border {
   
       border-width: 5px;
