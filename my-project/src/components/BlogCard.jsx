@@ -5,9 +5,9 @@ const BlogCard = () => {
   return (
     <div className="max-w-2xl mx-auto bg-slate-700 rounded-md overflow-hidden shadow-md my-8 flex">
       <img
-        src="https://via.placeholder.com/800x400"
+        src="/assets/images/r.jpg"
         alt="Blog Image"
-        className="w-1/2 h- object-cover object-center"
+        className="w-1/2 h- object-cover object-center rounded-lg"
       />
       <div className="w-1/2 p-6">
         <h2 className="text-xl font-semibold text-white-800 mb-2">

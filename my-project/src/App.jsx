@@ -16,7 +16,7 @@ function App() {
   const currentUser=true;
   const Layout=()=>{
     return (
-       <div>
+       <div className="bg-[#86B6F6]">
       <Navbar/>
         <Outlet/>
         
