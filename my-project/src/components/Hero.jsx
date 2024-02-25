@@ -38,8 +38,8 @@ const Hero = () => {
             initial={{ scale: 0.8 }}
             animate={{ scale: 1 }}
             className="text-xl mb-8"
-          >
-            We Find We Solve
+          ><br></br>
+            We Find We Cure
           </motion.p>
           <Link to="/quiz">
           <button className="font-sans text-lg rounded-md uppercase text-white cursor-pointer border-3 border-blue-500 p-2 px-4 relative select-none shadow-1 shadow-2 shadow-3 shadow-4 shadow-5 transition-transform duration-200 ease-in-out transform hover:translate-x-1 hover:translate-y-1 bg-blue-500 skew-x-12">

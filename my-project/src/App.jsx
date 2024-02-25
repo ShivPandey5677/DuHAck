@@ -18,6 +18,10 @@ import { AuthContext } from './context/authContext';
 import { useContext } from 'react';
 import NavBarL from './components/NavBarL';
 import RegPsych from './pages/RegPsych';
+import DepBlog from './components/DepBlog';
+import StrBlog from './components/StrBlog';
+import AnxBlog from './components/AnxBlog';
+import TraBlog from './components/TraBlog';
 
 function App() {
   const {currentUser}=useContext(AuthContext);
@@ -61,6 +65,23 @@ function App() {
           path:"/registerpsych",
           element:<RegPsych/>
         },
+        {
+          path:"/depblg",
+          element:<DepBlog/>
+        },
+        {
+          path:"/anxblg",
+          element:<AnxBlog/>
+        },
+        {
+          path:"/strblg",
+          element:<StrBlog/>
+        },
+        {
+          path:"/trablg",
+          element:<TraBlog/>
+        },
+      
        
       ]
     },

@@ -1,8 +1,7 @@
-
-
 import React, { useEffect, useState } from 'react'
 import { motion,useAnimation } from 'framer-motion';
 import {useInView} from "react-intersection-observer";
+import { Link } from 'react-router-dom';
 const Blog1 = () => {
     const boxVariant = {
         visible: { opacity: 1,
@@ -36,6 +35,7 @@ const Blog1 = () => {
                 Blogs that you might want to read about!
               </motion.h1>
                 <br></br>
+                <Link to="/depblg">
               <motion.button
       whileHover={{ scale: 1.1, backgroundColor: "#e6e6fa", color: "black" }}
       whileTap={{ scale: 0.9 }}
@@ -44,8 +44,9 @@ const Blog1 = () => {
     >
       <b>Depression</b>
     </motion.button>
+    </Link>
     <br></br>
-              
+    <Link to="/strblg">  
     <motion.button
       whileHover={{ scale: 1.1, backgroundColor: "#e6e6fa", color: "black" }}
       whileTap={{ scale: 0.9 }}
@@ -54,7 +55,9 @@ const Blog1 = () => {
     >
       <b>Stress</b>
     </motion.button>
+    </Link>
     <br></br>
+    <Link to="/anxblg">
     <motion.button
       whileHover={{ scale: 1.1, backgroundColor: "#e6e6fa", color: "black" }}
       whileTap={{ scale: 0.9 }}
@@ -63,8 +66,9 @@ const Blog1 = () => {
     >
       <b>Anxiety</b>
     </motion.button>
-
+    </Link>
     <br></br>
+    <Link to="/trablg">
     <motion.button
       whileHover={{ scale: 1.1, backgroundColor: "#e6e6fa", color: "black" }}
       whileTap={{ scale: 0.9 }}
@@ -73,6 +77,7 @@ const Blog1 = () => {
     >
       <b>Trauma</b>
     </motion.button>
+    </Link>
 
     <br></br>
 

@@ -1,12 +1,13 @@
-import React, { useEffect, useState } from "react";
-import './App.css'
-import BlogCard from './components/BlogCard';
+import React, { useContext, useEffect, useState } from "react";
+
+import BlogCard from './BlogCard';
 import { AuthContext } from '../context/authContext';
 import { useAnimation } from 'framer-motion';
 import { useQuery } from '@tanstack/react-query';
 import { makeRequest } from '../axios';
-const Blog = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
+
+const StrBlog = () => {
+    const [isLoaded, setIsLoaded] = useState(false);
   const controls = useAnimation();
   const [searchTerm, setSearchTerm] = useState('');
   const {currentUser}=useContext(AuthContext);
@@ -24,7 +25,7 @@ const Blog = () => {
   const { isLoading, error, data } = useQuery(
     {
       queryKey: ["blog"],
-      queryFn: () => makeRequest.get("/").then((res) => {
+      queryFn: () => makeRequest.get("/blog/strblg").then((res) => {
         return res.data;
       })
     }
@@ -59,11 +60,4 @@ const Blog = () => {
     )
 }
 
-export default Blog
-
-
-
-
-
-
-
+export default StrBlog

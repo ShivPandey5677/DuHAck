@@ -7,10 +7,17 @@ import { makeRequest } from '../axios';
 const QuizPage = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const controls = useAnimation();
-  const [searchTerm, setSearchTerm] = useState('');
   const {currentUser}=useContext(AuthContext);
-  const [sum, setSum] = useState(0); // Step 1: Initialize state variable for sum
+ // Step 1: Initialize state variable for sum
  
+const { isLoading, error, data } = useQuery(
+    {
+      queryKey: ["questions"],
+      queryFn: () => makeRequest.get("/question").then((res) => {
+        return res.data;
+      })
+    }
+  )
   useEffect(() => {
     const timeout = setTimeout(() => {
       setIsLoaded(true);
@@ -19,15 +26,6 @@ const QuizPage = () => {
 
     return () => clearTimeout(timeout);
   }, [controls]);
-
-  const { isLoading, error, data } = useQuery(
-    {
-      queryKey: ["questions"],
-      queryFn: () => makeRequest.get("/product").then((res) => {
-        return res.data;
-      })
-    }
-  )
   if (isLoading) {
     return <div>Loading...</div>;
   }
@@ -36,6 +34,7 @@ const QuizPage = () => {
     return <div>Error: {error.message}</div>;
   }
   const [selectedOptions, setSelectedOptions] = useState(Array(data.length).fill(null));
+  const [sum, setSum] = useState(0); 
   const handleOptionSelect = (questionIndex, optionIndex) => {
     const newSelectedOptions = [...selectedOptions];
     newSelectedOptions[questionIndex] = optionIndex;
@@ -44,12 +43,11 @@ const QuizPage = () => {
   const handleSubmit = () => {
     // Step 3: Loop through selected options and calculate sum
     let totalSum = 0;
-    data.forEach((question, index) => {
-      const selectedOption = document.querySelector(`input[name="question-${index}"]:checked`);
-      if (selectedOption) {
-        totalSum += parseInt(selectedOption.value);
+    selectedOptions.forEach((selectedOption, index) => {
+      if (selectedOption !== null) {
+        totalSum += parseInt(selectedOption);
       }
-    });
+})
     // Step 4: Set the sum state variable
     setSum(totalSum);
   };
@@ -61,6 +59,7 @@ const QuizPage = () => {
   };
 
   return (
+    isLoaded &&(
     <motion.div className="mx-auto p-4 w-full" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
       <h1 className="text-3xl font-bold mb-8 text-center">Quiz</h1>
       {data.map((question, index) => (
@@ -99,7 +98,7 @@ const QuizPage = () => {
         </motion.div>
       )}
     </motion.div>
-  );
+   ) );
 };
 
 export default QuizPage;
