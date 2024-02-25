@@ -12,7 +12,7 @@ const PsychCard = ({psych}) => {
     return (
         <div className="max-w-2xl mx-auto bg-slate-700 rounded-md overflow-hidden shadow-md my-8 flex">
          <img
-            src="assets/images/r.jpg"
+            src="/upload/r.jpg"
             alt="Blog Image"
             className="w-[25%] h-[20%] object-cover object-center"
           />
